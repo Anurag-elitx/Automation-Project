@@ -1,0 +1,169 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AliExpress Automation Suite">
+    <!-- Test listeners -->
+    <listeners>
+        <listener class-name="com.aliexpress.automation.listeners.TestListener"/>
+    </listeners>
+    
+    <!-- Common test parameters -->
+    <parameter name="searchTerm" value="smartphone"/>
+    <parameter name="minPrice" value="100"/>
+    <parameter name="maxPrice" value="500"/>
+    
+    <!-- XPath Tests -->
+    <test name="XPath Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.xpath.XPathTest"/>
+        </classes>
+    </test>
+    
+    <!-- CSS Selector Tests -->
+    <test name="CSS Selector Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.cssselector.CSSSelectorTest"/>
+        </classes>
+    </test>
+    
+    <!-- Synchronization Tests -->
+    <test name="Synchronization Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.synchronization.SynchronizationTest"/>
+        </classes>
+    </test>
+    
+    <!-- Exception Handling Tests -->
+    <test name="Exception Handling Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.exceptionhandling.ExceptionHandlingTest"/>
+        </classes>
+    </test>
+    
+    <!-- Select Class Tests -->
+    <test name="Select Class Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.selectclass.SelectClassTest"/>
+        </classes>
+    </test>
+    
+    <!-- Action Class Tests -->
+    <test name="Action Class Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.actionclass.ActionClassTest"/>
+        </classes>
+    </test>
+    
+    <!-- JavaScript Executor Tests -->
+    <test name="JavaScript Executor Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.javascriptexecutor.JavaScriptExecutorTest"/>
+        </classes>
+    </test>
+    
+    <!-- Handling Alerts Tests -->
+    <test name="Handling Alerts Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.handlingalerts.HandlingAlertsTest"/>
+        </classes>
+    </test>
+    
+    <!-- Handling iFrames Tests -->
+    <test name="Handling iFrames Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.handlingiframes.HandlingIFramesTest"/>
+        </classes>
+    </test>
+    
+    <!-- Handling Windows Tests -->
+    <test name="Handling Windows Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.handlingwindows.HandlingWindowsTest"/>
+        </classes>
+    </test>
+    
+    <!-- TestNG Features Tests -->
+    <test name="TestNG Data Provider Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.testng.DataProviderTest"/>
+        </classes>
+    </test>
+    
+    <test name="TestNG Dependency Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.testng.DependencyTest"/>
+        </classes>
+    </test>
+    
+    <test name="TestNG Groups Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="electronics"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.aliexpress.automation.tests.testng.GroupsTest"/>
+        </classes>
+    </test>
+    
+    <test name="TestNG Priority Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.testng.PriorityTest"/>
+        </classes>
+    </test>
+    
+    <test name="TestNG Parameterized Tests">
+        <parameter name="searchTerm" value="bluetooth earbuds"/>
+        <classes>
+            <class name="com.aliexpress.automation.tests.testng.ParameterizedTest"/>
+        </classes>
+    </test>
+    
+    <!-- Run these tests in parallel -->
+    <test name="TestNG Parallel Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.aliexpress.automation.tests.testng.ParallelTest"/>
+        </classes>
+    </test>
+    
+    <!-- Screenshots Tests -->
+    <test name="Screenshots Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.screenshots.ScreenshotsTest"/>
+        </classes>
+    </test>
+    
+    <!-- Reading Excel Files Tests -->
+    <test name="Excel Reader Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.excel.ExcelReaderTest"/>
+        </classes>
+    </test>
+    
+    <!-- Reading CSV Files Tests -->
+    <test name="CSV Reader Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.csv.CSVReaderTest"/>
+        </classes>
+    </test>
+    
+    <!-- ITestListener Tests -->
+    <test name="TestNG Listener Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.listener.ListenerTest"/>
+        </classes>
+    </test>
+    
+    <!-- Page Object Model Tests -->
+    <test name="Page Object Model Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.pom.PageObjectModelTest"/>
+        </classes>
+    </test>
+    
+    <!-- Page Factory Tests -->
+    <test name="Page Factory Tests">
+        <classes>
+            <class name="com.aliexpress.automation.tests.pagefactory.PageFactoryTest"/>
+        </classes>
+    </test>
+</suite>
